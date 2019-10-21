@@ -5,13 +5,13 @@ Subject: [PATCH] Increase system partition size for arm_ab
 
 Change-Id: I3ac099dd64624ec27c5fb64ce3fa3a9e500402e5
 ---
- phhgsi_arm_ab/BoardConfig.mk | 2 +-
+ device/phh/treble/phhgsi_arm_ab/BoardConfig.mk | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/phhgsi_arm_ab/BoardConfig.mk b/phhgsi_arm_ab/BoardConfig.mk
+diff --git a/device/phh/treble/phhgsi_arm_ab/BoardConfig.mk b/device/phh/treble/phhgsi_arm_ab/BoardConfig.mk
 index 18aaace..5726959 100644
---- a/phhgsi_arm_ab/BoardConfig.mk
-+++ b/phhgsi_arm_ab/BoardConfig.mk
+--- a/device/phh/treble/phhgsi_arm_ab/BoardConfig.mk
++++ b/device/phh/treble/phhgsi_arm_ab/BoardConfig.mk
 @@ -2,5 +2,5 @@ include build/make/target/board/generic_arm_ab/BoardConfig.mk
  include device/phh/treble/board-base.mk
  
