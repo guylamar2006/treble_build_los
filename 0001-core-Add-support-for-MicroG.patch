@@ -7,16 +7,16 @@ Subject: [PATCH] core: Add support for MicroG
 
 Change-Id: I0e5a0aca9fccbd4372de8ce3af76c53cc7c35f28
 ---
- core/res/AndroidManifest.xml                  |  7 ++++++
- core/res/res/values/config.xml                |  2 ++
- core/res/res/values/strings.xml               |  5 ++++
+ frameworks/base/core/res/AndroidManifest.xml                  |  7 ++++++
+ frameworks/base/core/res/res/values/config.xml                |  2 ++
+ frameworks/base/core/res/res/values/strings.xml               |  5 ++++
  .../server/pm/PackageManagerService.java      | 23 +++++++++++++++++--
  4 files changed, 35 insertions(+), 2 deletions(-)
 
-diff --git a/core/res/AndroidManifest.xml b/core/res/AndroidManifest.xml
+diff --git a/frameworks/base/core/res/AndroidManifest.xml b/frameworks/base/core/res/AndroidManifest.xml
 index 34d26f0da90..08f95ec1fdf 100644
---- a/core/res/AndroidManifest.xml
-+++ b/core/res/AndroidManifest.xml
+--- a/frameworks/base/core/res/AndroidManifest.xml
++++ b/frameworks/base/core/res/AndroidManifest.xml
 @@ -2357,6 +2357,13 @@
          android:description="@string/permdesc_getPackageSize"
          android:protectionLevel="normal" />
@@ -31,10 +31,10 @@ index 34d26f0da90..08f95ec1fdf 100644
      <!-- @deprecated No longer useful, see
           {@link android.content.pm.PackageManager#addPackageToPreferred}
           for details. -->
-diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
+diff --git a/frameworks/base/core/res/res/values/config.xml b/frameworks/base/core/res/res/values/config.xml
 index f7b06f98512..703a63ff5f1 100644
---- a/core/res/res/values/config.xml
-+++ b/core/res/res/values/config.xml
+--- a/frameworks/base/core/res/res/values/config.xml
++++ b/frameworks/base/core/res/res/values/config.xml
 @@ -1716,6 +1716,8 @@
      <string-array name="config_locationProviderPackageNames" translatable="false">
          <!-- The standard AOSP fused location provider -->
@@ -44,10 +44,10 @@ index f7b06f98512..703a63ff5f1 100644
      </string-array>
  
      <!-- This string array can be overriden to enable test location providers initially. -->
-diff --git a/core/res/res/values/strings.xml b/core/res/res/values/strings.xml
+diff --git a/frameworks/base/core/res/res/values/strings.xml b/frameworks/base/core/res/res/values/strings.xml
 index f6600462ea7..bd96a09684f 100644
---- a/core/res/res/values/strings.xml
-+++ b/core/res/res/values/strings.xml
+--- a/frameworks/base/core/res/res/values/strings.xml
++++ b/frameworks/base/core/res/res/values/strings.xml
 @@ -785,6 +785,11 @@
  
      <!--  Permissions -->
@@ -60,10 +60,10 @@ index f6600462ea7..bd96a09684f 100644
      <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
      <string name="permlab_statusBar">disable or modify status bar</string>
      <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-diff --git a/services/core/java/com/android/server/pm/PackageManagerService.java b/services/core/java/com/android/server/pm/PackageManagerService.java
+diff --git a/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java b/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
 index 9b50a1545a5..f12509e36e7 100644
---- a/services/core/java/com/android/server/pm/PackageManagerService.java
-+++ b/services/core/java/com/android/server/pm/PackageManagerService.java
+--- a/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
++++ b/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
 @@ -4001,8 +4001,9 @@ public class PackageManagerService extends IPackageManager.Stub
              final Set<String> permissions = ArrayUtils.isEmpty(p.requestedPermissions)
                      ? Collections.<String>emptySet() : permissionsState.getPermissions(userId);
