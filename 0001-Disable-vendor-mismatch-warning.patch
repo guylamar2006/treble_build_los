@@ -5,13 +5,13 @@ Subject: [PATCH] Disable vendor mismatch warning
 
 Change-Id: Ieb8fe91e2f02462f074312ed0f4885d183e9780b
 ---
- services/core/java/com/android/server/am/ActivityManagerService.java | 4 ++--
+ frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/services/core/java/com/android/server/am/ActivityManagerService.java b/services/core/java/com/android/server/am/ActivityManagerService.java
+diff --git a/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java b/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java
 index 7274c80..0d1a92f 100644
---- a/services/core/java/com/android/server/am/ActivityManagerService.java
-+++ b/services/core/java/com/android/server/am/ActivityManagerService.java
+--- a/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java
++++ b/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java
 @@ -14356,8 +14356,8 @@ public class ActivityManagerService extends IActivityManager.Stub
              }
  
