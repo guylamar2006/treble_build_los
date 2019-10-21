@@ -11,10 +11,10 @@ Change-Id: Ib8d70bb2499a147506d896ebd54e5aa45fe76f2e
  3 files changed, 265 insertions(+), 3 deletions(-)
  create mode 100644 qseecom.h
 
-diff --git a/Android.bp b/Android.bp
+diff --git a/vendor/qcom/opensource/cryptfs_hw/Android.bp b/vendor/qcom/opensource/cryptfs_hw/Android.bp
 index abbe407..d40e884 100644
---- a/Android.bp
-+++ b/Android.bp
+--- a/vendor/qcom/opensource/cryptfs_hw/Android.bp
++++ b/vendor/qcom/opensource/cryptfs_hw/Android.bp
 @@ -10,8 +10,7 @@ commonSharedLibraries = [
  
  cc_library_shared {
@@ -25,24 +25,24 @@ index abbe407..d40e884 100644
      cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
      srcs: sourceFiles,
      shared_libs: commonSharedLibraries,
-diff --git a/cryptfs_hw.c b/cryptfs_hw.c
+diff --git a/vendor/qcom/opensource/cryptfs_hw/cryptfs_hw.c b/vendor/qcom/opensource/cryptfs_hw/cryptfs_hw.c
 index 482e28b..fbde52f 100644
---- a/cryptfs_hw.c
-+++ b/cryptfs_hw.c
+--- a/vendor/qcom/opensource/cryptfs_hw/cryptfs_hw.c
++++ b/vendor/qcom/opensource/cryptfs_hw/cryptfs_hw.c
 @@ -37,7 +37,7 @@
  #include <dirent.h>
  #include <dlfcn.h>
  #include <errno.h>
--#include <linux/qseecom.h>
+-#include <linux/vendor/qcom/opensource/cryptfs_hw/qseecom.h>
 +#include "qseecom.h"
  #include <hardware/keymaster_common.h>
  #include <hardware/hardware.h>
  #include "cutils/log.h"
-diff --git a/qseecom.h b/qseecom.h
+diff --git a/vendor/qcom/opensource/cryptfs_hw/qseecom.h b/vendor/qcom/opensource/cryptfs_hw/qseecom.h
 new file mode 100644
 index 0000000..b63b36e
 --- /dev/null
-+++ b/qseecom.h
++++ b/vendor/qcom/opensource/cryptfs_hw/qseecom.h
 @@ -0,0 +1,263 @@
 +#ifndef __QSEECOM_H_
 +#define __QSEECOM_H_
